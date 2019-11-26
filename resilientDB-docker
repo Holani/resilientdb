@@ -141,4 +141,6 @@ wait
 scripts/result.sh ${replicas} ${clients} PBFT 100 0 >res.out
 scripts/result_colorized.sh ${replicas} ${clients} PBFT 100 0
 # rm results/*
-printf "${GREEN}Code Ran successfully${NC} ---> res.out\n"
+timestamp=`date '+%Y_%m_%d__%H_%M_%S'`
+mv res.out res_${timestamp}.out
+printf "${GREEN}Code Ran successfully${NC} ---> res_${timestamp}.out\n"
